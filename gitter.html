@@ -1,0 +1,107 @@
+<style>
+    body {
+        background: #F3AC3C;
+        display: flex;
+    }
+
+    .gitter {
+        display: flex;
+        position: relative;
+        align-items: center;
+        width: 250px;
+        margin-left: 38px;
+    }
+
+    .largeCircle {
+        width: 120px;
+        height: 120px;
+        background: #998235;
+        border-radius: 50%;
+        position: absolute;
+    }
+
+    .largeCircle::after {
+        content: "";
+        position: absolute;
+        left: 33%;
+        top: 33%;
+        height: 40px;
+        width: 10px;
+        background: #1A4341;
+        z-index: 500;
+        border-radius: 5px;
+    }
+
+    .smallCircle {
+        width: 100px;
+        height: 100px;
+        background: #998235;
+        border-radius: 50%;
+        position: absolute;
+        left: 28%;
+    }
+
+    .smallCircle::before {
+        content: "";
+        position: absolute;
+        left: 95%;
+        width: 120px;
+        height: 20px;
+        background: #1A4341;
+        z-index: -1;
+        top: 50%;
+        transform: translate(0%, -50%);
+    }
+
+    .smallCircle::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 40px;
+        height: 40px;
+        background: #1A4341;
+        border-radius: 50%;
+        border: 5px solid #F3AC3C;
+
+    }
+
+    .settings {
+        width: 40px;
+        height: 30px;
+        background: #998235;
+        border-radius: 10px;
+        position: absolute;
+        left: 92%;
+        transform: translate(100%, 0%);
+    }
+
+    .settings::before {
+        content: '';
+        position: absolute;
+        left: 25%;
+        height: 4px;
+        width: 20px;
+        background: #1A4341;
+        border-radius: 3px;
+        top: 9px;
+    }
+
+    .settings::after {
+        content: '';
+        position: absolute;
+        bottom: 7px;
+        left: 25%;
+        height: 4px;
+        width: 20px;
+        background: #1A4341;
+        border-radius: 3px;
+    }
+</style>
+
+<div class="gitter">
+    <div class="largeCircle"> </div>
+    <div class="smallCircle"> </div>
+    <div class="settings"> </div>
+</div>
